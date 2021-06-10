@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Home Screen{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>--- Our pizzeria have this pizzas ---</h1>
+        {% for el in Pizzas %}
+            <div class="pizza articles">
+                <h3>{{ el.name }}</h3>
+                <p>Price: {{ el.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
