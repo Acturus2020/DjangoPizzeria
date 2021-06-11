@@ -8,6 +8,7 @@ class PizzaOrderInlineAdmin(admin.TabularInline):
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['id', 'address', 'status']
     list_filter = ['status']
+
     inlines = (PizzaOrderInlineAdmin,)
 
 # Register your models here.
